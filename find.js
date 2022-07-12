@@ -1,12 +1,11 @@
-module.exports = function find(elements, cb) {
-    if (!Array.isArray(elements) || !cb) {
-        return [];
-      }else{
-
-  for (let i = 0; i < elements.length; i++) {
-    if (cb(elements[i])) {
-      return elements[i];
+module.exports = function find(elements, callback) {
+  if (!Array.isArray(elements) || !callback) {
+    return [];
+  } else {
+    for (let i = 0; i < elements.length; i++) {
+      if (callback(elements[i])) {
+        return elements[i];
+      }
     }
   }
-}
-}
+};
