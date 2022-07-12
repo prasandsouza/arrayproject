@@ -3,8 +3,7 @@ module.exports = function reduce(elements, callback, startingValue) {
     return [];
   } else {
     for (let i = 1; i < elements.length; i++) {
-      let accumulator = callback(startingValue, elements[i]);
-      startingValue = accumulator;
+     startingValue = callback(startingValue,elements[i],elements)
     }
     return startingValue;
   }
