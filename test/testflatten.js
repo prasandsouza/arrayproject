@@ -1,5 +1,5 @@
 let array = require("../nestedarray");
 let logic = require(`../flatten`);
-
-let result = logic([1, [2], [[3]], , [[[[[[{id :0, name : 'sharun'}]]]]]], [[[4]]]]);
+let depth = 0;
+let result = logic(array,depth);
 console.log(result);
