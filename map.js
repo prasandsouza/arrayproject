@@ -1,10 +1,10 @@
-module.exports = function map(elements, cb) {
-  if (!Array.isArray(elements)) {
+module.exports = function map(elements, callback) {
+  if (!Array.isArray(elements) || !callback) {
     return [];
   } else {
     let numberArray = [];
     for (let i = 0; i < elements.length; i++) {
-      numberArray.push(cb(elements[i], i));
+      numberArray.push(callback(elements[i], i));
     }
     return numberArray;
   }
