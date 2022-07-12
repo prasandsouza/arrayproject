@@ -4,7 +4,7 @@ module.exports = function map(elements, callback) {
   } else {
     let numberArray = [];
     for (let i = 0; i < elements.length; i++) {
-      numberArray.push(callback(elements[i], i));
+      numberArray.push(callback(elements[i]));
     }
     return numberArray;
   }
