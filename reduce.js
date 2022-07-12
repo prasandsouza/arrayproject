@@ -1,9 +1,9 @@
-module.exports = function reduce(elements, cb, startingValue) {
-  if (!Array.isArray(elements)) {
+module.exports = function reduce(elements, callback, startingValue) {
+  if (!Array.isArray(elements)||!callback||!startingValue) {
     return [];
   } else {
-    for (let i = 0; i < elements.length; i++) {
-      let accumulator = cb(startingValue, elements[i]);
+    for (let i = 1; i < elements.length; i++) {
+      let accumulator = callback(startingValue, elements[i]);
       startingValue = accumulator;
     }
     return startingValue;
