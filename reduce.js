@@ -1,9 +1,9 @@
 module.exports = function reduce(elements, callback, startingValue) {
-  if (!Array.isArray(elements) || !callback || !startingValue) {
+  if (!Array.isArray(elements) || !callback) {
     return [];
   }
   if(startingValue === undefined){
-    startingValue = elements[i]
+    startingValue = elements[0]
   }
   else{
     startingValue = callback(startingValue,elements[0],elements)
