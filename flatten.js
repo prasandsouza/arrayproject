@@ -1,4 +1,7 @@
 module.exports = function flatten(elements, depth) {
+    if (!Array.isArray(elements)) {
+        return [];
+      }
   if (depth === undefined) {
     depth = 1;
   }
