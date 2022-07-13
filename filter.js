@@ -3,10 +3,12 @@ module.exports = function filter(elements, callback) {
     return [];
   }
   let filterarray = [];
+  if(callback){
   for (let index = 0; index < elements.length; index++) {
     if (callback(elements[index], index, elements)) {
       filterarray.push(elements[index]);
     }
   }
+}
   return filterarray;
 };
