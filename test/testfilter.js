@@ -1,9 +1,9 @@
-let array = require(`../array`);
-let logic = require(`../filter.js`);
+let array = require(`../array`)
+let logic = require(`../filter.js`)
 
-let callback = function (number) {
-  if (number % 2 === 0) return number;
-};
+let callback = function(number,index,array){
+    if(number%2===0) return true
+}
 
-let result = logic(array, callback);
-console.log(result);
+let result = logic(array,callback)
+console.log(result)
