@@ -2,10 +2,12 @@ module.exports = function filter(elements, callback) {
   if (!Array.isArray(elements)) {
     return [];
   } else {
-    for (let i = 0; i < elements.length; i++) {
-      if (callback(elements[i])) {
-        return callback(elements[i], i);
+    let filterarray =[]
+    for (let index = 0; index < elements.length; index++) {
+      if (callback(elements[index])) {
+        filterarray.push(elements[index])
       }
     }
+    return filterarray;
   }
 };
