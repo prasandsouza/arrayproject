@@ -1,13 +1,12 @@
 module.exports = function filter(elements, callback) {
-  if (!Array.isArray(elements)) {
+  if (!Array.isArray(elements) || !callback) {
     return [];
-  } else {
-    let filterarray =[]
-    for (let index = 0; index < elements.length; index++) {
-      if (callback(elements[index])) {
-        filterarray.push(elements[index])
-      }
-    }
-    return filterarray;
   }
+  let filterarray = [];
+  for (let index = 0; index < elements.length; index++) {
+    if (callback(elements[index], index, elements)) {
+      filterarray.push(elements[index]);
+    }
+  }
+  return filterarray;
 };
