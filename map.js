@@ -3,8 +3,8 @@ module.exports = function map(elements, callback) {
     return [];
   } else {
     let numberArray = [];
-    for (let i = 0; i < elements.length; i++) {
-      numberArray.push(callback(elements[i]));
+    for (let index = 0; index < elements.length; index++) {
+      numberArray.push(callback(elements[index]));
     }
     return numberArray;
   }
